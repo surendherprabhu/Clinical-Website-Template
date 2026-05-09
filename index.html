@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A configurable healthcare website template powered by external JSON data.">
+  <meta name="theme-color" content="#1f7a7a">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Healthcare Website Template">
+  <meta property="og:description" content="A responsive healthcare website template rendered from configuration data.">
+  <title>Healthcare Website Template</title>
+  <link rel="icon" href="./assets/images/favicon.png" type="image/png">
+  <link rel="preload" href="./data/clinic-data.json" as="fetch" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/globals.css">
+  <link rel="stylesheet" href="./styles/components.css">
+  <link rel="stylesheet" href="./styles/responsive.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="site-header" class="site-header" data-render="navbar"></header>
+
+  <main id="main-content" tabindex="-1">
+    <section id="hero" class="section section-hero" data-render="hero"></section>
+    <section id="services" class="section" data-render="services"></section>
+    <section id="doctors" class="section section-muted" data-render="doctors"></section>
+    <section id="testimonials" class="section" data-render="testimonials"></section>
+    <section id="faq" class="section section-muted" data-render="faq"></section>
+    <section id="contact" class="section" data-render="contact"></section>
+    <section id="appointment" class="section section-cta" data-render="appointment"></section>
+  </main>
+
+  <footer id="site-footer" class="site-footer" data-render="footer"></footer>
+  <div id="floating-contact" data-render="floating-contact"></div>
+  <div id="site-status" class="site-status" role="status" aria-live="polite" hidden></div>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

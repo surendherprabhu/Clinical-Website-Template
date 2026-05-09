@@ -1,0 +1,201 @@
+@media (min-width: 560px) {
+  .doctor-stat-grid,
+  .form-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-grid,
+  .doctor-grid,
+  .branch-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 760px) {
+  .section-hero {
+    padding-block: 4rem 4.5rem;
+  }
+
+  .section-title {
+    font-size: 2.75rem;
+  }
+
+  .section-copy {
+    font-size: 1.08rem;
+  }
+
+  .hero-title {
+    max-width: 10.5ch;
+    font-size: 4.15rem;
+  }
+
+  .hero-text {
+    font-size: 1.14rem;
+  }
+
+  .featured-doctor h3 {
+    font-size: 2.05rem;
+  }
+
+  .testimonial-quote {
+    font-size: 1.18rem;
+  }
+
+  .appointment-panel h2 {
+    font-size: 2.65rem;
+  }
+
+  .hero-layout {
+    grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+  }
+
+  .featured-doctor {
+    grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1fr);
+  }
+
+  .contact-layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  }
+
+  .appointment-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .appointment-actions {
+    justify-content: flex-end;
+  }
+
+  .footer-grid {
+    grid-template-columns: minmax(260px, 1.3fr) repeat(3, minmax(0, 0.7fr));
+  }
+}
+
+@media (min-width: 980px) {
+  .section-title {
+    font-size: 3.15rem;
+  }
+
+  .hero-title {
+    font-size: 4.65rem;
+  }
+
+  .featured-doctor h3 {
+    font-size: 2.3rem;
+  }
+
+  .testimonial-quote {
+    font-size: 1.26rem;
+  }
+
+  .appointment-panel h2 {
+    font-size: 3.1rem;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .doctor-grid,
+  .branch-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 899px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .nav-toggle {
+    display: grid;
+  }
+
+  .nav-menu {
+    position: fixed;
+    inset: var(--header-height) 0 auto 0;
+    display: grid;
+    max-height: calc(100svh - var(--header-height));
+    gap: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.98);
+    padding: 1rem;
+    box-shadow: var(--shadow-soft);
+    overflow-y: auto;
+    transform: translateY(-115%);
+    visibility: hidden;
+    transition:
+      transform 220ms ease,
+      visibility 220ms ease;
+  }
+
+  .is-nav-open .nav-menu {
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .nav-links {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem;
+  }
+
+  .nav-menu .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 559px) {
+  :root {
+    --section-y: 3.5rem;
+  }
+
+  .container {
+    width: min(100% - 1.25rem, var(--container));
+  }
+
+  .brand-mark {
+    width: 2.45rem;
+    height: 2.45rem;
+    border-radius: 0.75rem;
+  }
+
+  .brand-name {
+    max-width: 10.8rem;
+  }
+
+  .brand-tagline {
+    max-width: 10.8rem;
+  }
+
+  .hero-title {
+    max-width: 11ch;
+  }
+
+  .hero-note {
+    position: static;
+    width: auto;
+    margin: 0.75rem;
+  }
+
+  .button-row,
+  .carousel-controls,
+  .footer-bottom-inner {
+    align-items: stretch;
+  }
+
+  .button-row .button {
+    width: 100%;
+  }
+
+  .floating-contact {
+    right: 0.75rem;
+    bottom: 0.75rem;
+    max-width: calc(100% - 1.5rem);
+  }
+}
