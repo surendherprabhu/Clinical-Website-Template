@@ -3,7 +3,11 @@ import { icon } from "./icons.js";
 
 export function renderDoctors(content) {
   const doctors = content.doctors || {};
-  const featured = doctors.featured || {};
+  const featuredDoctors = Array.isArray(doctors.featuredDoctors)
+    ? doctors.featuredDoctors
+    : doctors.featured
+      ? [doctors.featured]
+      : [];
 
   return `
     <div class="container doctors-layout">
@@ -13,36 +17,40 @@ export function renderDoctors(content) {
         ${doctors.summary ? `<p class="section-copy">${text(doctors.summary)}</p>` : ""}
       </div>
 
-      <article class="featured-doctor" data-reveal>
-        <div class="featured-doctor-media">
-          ${imageTag(featured.image, "", "lazy")}
-        </div>
-        <div class="featured-doctor-copy">
-          ${featured.kicker ? `<p class="doctor-kicker">${text(featured.kicker)}</p>` : ""}
-          <h3>${text(featured.name || "")}</h3>
-          ${featured.role ? `<p class="doctor-role">${text(featured.role)}</p>` : ""}
-          ${featured.bio ? `<p class="doctor-bio">${text(featured.bio)}</p>` : ""}
-          <div class="doctor-stat-grid">
-            ${list(featured.stats, (stat) => `
-              <div class="doctor-stat">
-                <span class="doctor-stat-icon">${icon(stat.icon || "spark")}</span>
-                <div>
-                  <strong>${text(stat.value)}</strong>
-                  <span>${text(stat.label)}</span>
-                </div>
-              </div>
-            `)}
-          </div>
-          ${featured.cta?.label ? `
-            <div class="button-row" style="margin-top: 1.4rem;">
-              <a class="button button-secondary" href="${href(featured.cta.href)}">
-                ${text(featured.cta.label)}
-                ${icon("arrowRight")}
-              </a>
+      <div class="featured-doctor-list">
+        ${list(featuredDoctors, (featured) => `
+          <article class="featured-doctor" data-reveal>
+            <div class="featured-doctor-media">
+              ${imageTag(featured.image, "", "lazy")}
             </div>
-          ` : ""}
-        </div>
-      </article>
+            <div class="featured-doctor-copy">
+              ${featured.kicker ? `<p class="doctor-kicker">${text(featured.kicker)}</p>` : ""}
+              <h3>${text(featured.name || "")}</h3>
+              ${featured.role ? `<p class="doctor-role">${text(featured.role)}</p>` : ""}
+              ${featured.bio ? `<p class="doctor-bio">${text(featured.bio)}</p>` : ""}
+              <div class="doctor-stat-grid">
+                ${list(featured.stats, (stat) => `
+                  <div class="doctor-stat">
+                    <span class="doctor-stat-icon">${icon(stat.icon || "spark")}</span>
+                    <div>
+                      <strong>${text(stat.value)}</strong>
+                      <span>${text(stat.label)}</span>
+                    </div>
+                  </div>
+                `)}
+              </div>
+              ${featured.cta?.label ? `
+                <div class="button-row" style="margin-top: 1.4rem;">
+                  <a class="button button-secondary" href="${href(featured.cta.href)}">
+                    ${text(featured.cta.label)}
+                    ${icon("arrowRight")}
+                  </a>
+                </div>
+              ` : ""}
+            </div>
+          </article>
+        `)}
+      </div>
 
       <div class="doctor-grid">
         ${list(doctors.items, (doctor) => `

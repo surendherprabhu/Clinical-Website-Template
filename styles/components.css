@@ -381,6 +381,11 @@
   gap: clamp(1.4rem, 4vw, 3rem);
 }
 
+.featured-doctor-list {
+  display: grid;
+  gap: 1rem;
+}
+
 .featured-doctor {
   display: grid;
   overflow: hidden;

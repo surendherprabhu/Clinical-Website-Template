@@ -147,26 +147,48 @@ clinic_data: dict[str, Any] = {
                 "eyebrow": "Care team",
                 "title": "Doctor profiles built for clinics of any size",
                 "summary": "Highlight a lead clinician, then scale into a team directory with consistent, reusable profile cards.",
-                "featured": {
-                    "kicker": "Featured clinician",
-                    "name": "Doctor Name",
-                    "role": "Specialty or clinical role",
-                    "bio": "Use this space for a concise, trust-building introduction focused on experience, care philosophy, and patient communication style.",
-                    "image": {
-                        "src": "./assets/images/doctor-placeholder.png",
-                        "alt": "Generic clinician portrait placeholder",
-                        "width": 900,
-                        "height": 1100,
+                "featuredDoctors": [
+                    {
+                        "kicker": "Lead clinician",
+                        "name": "Lead Doctor Profile",
+                        "role": "Primary specialty or clinical role",
+                        "bio": "Use this space for a concise, trust-building introduction focused on experience, care philosophy, and patient communication style.",
+                        "image": {
+                            "src": "./assets/images/doctor-placeholder.png",
+                            "alt": "Generic lead clinician portrait placeholder",
+                            "width": 900,
+                            "height": 1100,
+                        },
+                        "stats": [
+                            {"icon": "calendar", "value": "Flexible hours", "label": "Show provider availability"},
+                            {"icon": "shield", "value": "Care focus", "label": "List credentials and specialties"},
+                        ],
+                        "cta": {
+                            "label": "View Appointment Options",
+                            "href": "#contact",
+                        },
                     },
-                    "stats": [
-                        {"icon": "calendar", "value": "Flexible hours", "label": "Show provider availability"},
-                        {"icon": "shield", "value": "Care focus", "label": "List credentials and specialties"},
-                    ],
-                    "cta": {
-                        "label": "View Appointment Options",
-                        "href": "#contact",
+                    {
+                        "kicker": "Lead clinician",
+                        "name": "Second Lead Doctor Profile",
+                        "role": "Secondary specialty or clinical role",
+                        "bio": "Use this second lead profile for another principal doctor, partner clinician, or senior consultant while keeping the same reusable layout.",
+                        "image": {
+                            "src": "./assets/images/doctor-placeholder.png",
+                            "alt": "Generic second lead clinician portrait placeholder",
+                            "width": 900,
+                            "height": 1100,
+                        },
+                        "stats": [
+                            {"icon": "stethoscope", "value": "Specialty focus", "label": "Show lead clinician expertise"},
+                            {"icon": "mapPin", "value": "Branch coverage", "label": "Connect availability to locations"},
+                        ],
+                        "cta": {
+                            "label": "View Appointment Options",
+                            "href": "#contact",
+                        },
                     },
-                },
+                ],
                 "items": [
                     {
                         "name": "Clinician Profile",
