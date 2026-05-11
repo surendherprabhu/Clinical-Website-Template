@@ -311,6 +311,36 @@
   gap: 1rem;
 }
 
+.about-layout,
+.about-statement-grid,
+.value-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-panel,
+.value-card {
+  padding: 1.25rem;
+}
+
+.about-panel h3,
+.value-card h4 {
+  margin: 1rem 0 0;
+  color: var(--color-ink);
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.about-panel p,
+.value-card p {
+  margin: 0.75rem 0 0;
+  color: var(--color-muted);
+}
+
+.about-values-heading {
+  margin-top: clamp(1rem, 3vw, 2rem);
+}
+
 .service-card {
   display: flex;
   min-height: 100%;

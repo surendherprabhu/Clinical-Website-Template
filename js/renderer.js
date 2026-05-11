@@ -1,4 +1,5 @@
 import { renderAppointment } from "./components/cta.js";
+import { renderAbout } from "./components/about.js";
 import { renderContact } from "./components/contact.js";
 import { renderDoctors } from "./components/doctors.js";
 import { renderFaq } from "./components/faq.js";
@@ -14,6 +15,7 @@ const SECTION_RENDERERS = {
   navbar: renderNavbar,
   hero: renderHero,
   services: renderServices,
+  about: renderAbout,
   doctors: renderDoctors,
   testimonials: renderTestimonials,
   faq: renderFaq,

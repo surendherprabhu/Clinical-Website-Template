@@ -6,7 +6,8 @@
 
   .service-grid,
   .doctor-grid,
-  .branch-grid {
+  .branch-grid,
+  .about-statement-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -92,6 +93,10 @@
   }
 
   .service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .value-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
