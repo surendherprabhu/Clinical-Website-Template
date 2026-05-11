@@ -32,10 +32,10 @@ clinic_data: dict[str, Any] = {
             "branding": {
                 "name": "OraCare Dental Clinic",
                 "tagline": "Advanced Dentistry, Gentle Touch.",
-                "logoText": "Ora",
+                "logoText": "OC",
                 "theme": {
-                    "primary": "#1f7a7a",
-                    "primaryDark": "#155e63",
+                    "primary": "#1676c4",
+                    "primaryDark": "#135a7a",
                     "secondary": "#3566c4",
                     "accent": "#d98f5f",
                     "ink": "#163139",
@@ -67,14 +67,14 @@ clinic_data: dict[str, Any] = {
             },
             "hero": {
                 "eyebrow": "Artistic smiles, precise care.",
-                "title": "OraCare: Your Smile, Our Science.",
+                "title": "OraCare: Oral Health is Over-All Health.",
                 "summary": "Next-gen care for a timeless smile, delivered with clinical mastery, transparency, and a gentle patient-first approach.",
                 "actions": [
                     {"label": "Request Appointment", "href": "#contact"},
                     {"label": "Explore Services", "href": "#services"},
                 ],
                 "image": {
-                    "src": "./assets/images/hero-care-suite.png",
+                    "src": "./assets/images/logo.jpeg",
                     "alt": "Modern dental care environment at OraCare Dental Clinic.",
                     "width": 1400,
                     "height": 1000,
