@@ -207,7 +207,7 @@ clinic_data: dict[str, Any] = {
                         "role": "prosthodontist",
                         "bio": "MBBS, MDS",
                         "image": {
-                            "src": "./assets/images/prabhu.jpeg",
+                            "src": "./assets/images/Prabhu.jpeg",
                             "alt": "Generic second lead clinician portrait placeholder",
                             "width": 900,
                             "height": 1100,
