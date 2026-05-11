@@ -32,7 +32,7 @@ clinic_data: dict[str, Any] = {
             "branding": {
                 "name": "OraCare Dental Clinic",
                 "tagline": "Advanced Dentistry, Gentle Touch.",
-                "logoText": "",
+                "logoText": "Ora",
                 "theme": {
                     "primary": "#1f7a7a",
                     "primaryDark": "#155e63",
@@ -193,8 +193,8 @@ clinic_data: dict[str, Any] = {
                             "height": 1100,
                         },
                         "stats": [
-                            {"icon": "calendar", "value": "Flexible hours", "label": "Show provider availability"},
-                            {"icon": "shield", "value": "Care focus", "label": "List credentials and specialties"},
+                            {"icon": "stethoscope", "value": "Oral Medicine and Radiology", "label": "Redefine the dental experience"},
+                            {"icon": "stethoscope", "value": "Compassion in Action", "label": "Focused on careful assessment, patient education, and coordinated support throughout the dental visit."},
                         ],
                         "cta": {
                             "label": "View Appointment Options",
@@ -207,14 +207,14 @@ clinic_data: dict[str, Any] = {
                         "role": "prosthodontist",
                         "bio": "MBBS, MDS",
                         "image": {
-                            "src": "./assets/images/old photo .png",
+                            "src": "./assets/images/prabhu.jpeg",
                             "alt": "Generic second lead clinician portrait placeholder",
                             "width": 900,
                             "height": 1100,
                         },
                         "stats": [
-                            {"icon": "stethoscope", "value": "Specialty focus", "label": "Show lead clinician expertise"},
-                            {"icon": "mapPin", "value": "Branch coverage", "label": "Connect availability to locations"},
+                            {"icon": "stethoscope", "value": "Prosthodontist", "label": "Expert Prosthodontic Treatment"},
+                            {"icon": "stethoscope", "value": "Expert care", "label": "Comfort support"},
                         ],
                         "cta": {
                             "label": "View Appointment Options",
@@ -255,20 +255,20 @@ clinic_data: dict[str, Any] = {
                 "items": [
                     {
                         "ratingLabel": "5.0 patient rating",
-                        "quote": "The visit felt calm and organized, and every step of the treatment plan was explained clearly.",
-                        "name": "Patient A",
+                        "quote": "I wanted to share good experience abt tis clinic.I went for my scaling and 'm wondered and surprised the way Dr. Gayatri mam treated me.. She has nicely explained how to maintain oral hygiene wich we don follow routinely. Well maintained clinic and equipments.",
+                        "name": "Sujitha Dhanasekar",
                         "context": "Verified visit",
                     },
                     {
-                        "ratingLabel": "5.0 patient rating",
-                        "quote": "The team listened patiently, answered questions, and made the experience feel genuinely comfortable.",
-                        "name": "Patient B",
+                        "ratingLabel": "4.9 patient rating",
+                        "quote": "Very Good Experience and Response, Good Explanation to our issues and requirements, Strong recommendation to visit Ora dental Clinic..",
+                        "name": "Balaji Sivakumar",
                         "context": "Follow-up care",
                     },
                     {
-                        "ratingLabel": "5.0 patient rating",
-                        "quote": "The care felt precise and personal, with honest guidance about what my smile actually needed.",
-                        "name": "Patient C",
+                        "ratingLabel": "4.8 patient rating",
+                        "quote": "Good in diagnosis, Clear explanation and economical clinic.",
+                        "name": "Ashok Kumar T M",
                         "context": "Smile care",
                     },
                 ],
@@ -344,7 +344,7 @@ clinic_data: dict[str, Any] = {
                         "hours": "9:30 AM to 1:00 PM and 4.30 PM to 9.00 PM",
                         "phone": "+91 99405 92307",
                         "image": {
-                            "src": "./assets/images/branch-suite.png",
+                            "src": "./assets/images/rpt.jpeg",
                             "alt": "OraCare dental clinic interior placeholder",
                             "width": 1100,
                             "height": 800,
@@ -356,7 +356,7 @@ clinic_data: dict[str, Any] = {
                         "hours": "9.00 AM to 9.00 PM",
                         "phone": "+91 9994179155 / +91 9940592307",
                         "image": {
-                            "src": "./assets/images/branch-suite.png",
+                            "src": "./assets/images/cpt.jpg",
                             "alt": "OraCare second dental clinic, Chengalpattu",
                             "width": 1100,
                             "height": 800,
