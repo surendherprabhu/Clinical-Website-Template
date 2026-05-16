@@ -3,6 +3,8 @@ import { icon } from "./icons.js";
 
 export function renderAbout(content) {
   const about = content.about || {};
+  const values = Array.isArray(about.values) ? about.values : [];
+  const hasValuesSection = Boolean(about.valuesTitle || about.valuesSummary || values.length);
 
   return `
     <div class="container about-layout">
@@ -29,21 +31,25 @@ export function renderAbout(content) {
         ` : ""}
       </div>
 
-      <div>
-        <div class="section-heading centered about-values-heading" data-reveal>
-          <h3 class="section-title">${text(about.valuesTitle || "")}</h3>
-          ${about.valuesSummary ? `<p class="section-copy">${text(about.valuesSummary)}</p>` : ""}
+      ${hasValuesSection ? `
+        <div>
+          <div class="section-heading centered about-values-heading" data-reveal>
+            ${about.valuesTitle ? `<h3 class="section-title">${text(about.valuesTitle)}</h3>` : ""}
+            ${about.valuesSummary ? `<p class="section-copy">${text(about.valuesSummary)}</p>` : ""}
+          </div>
+          ${values.length ? `
+            <div class="value-grid">
+              ${list(values, (value) => `
+                <article class="card value-card" data-reveal>
+                  <span class="service-icon">${icon(value.icon || "check")}</span>
+                  <h4>${text(value.title)}</h4>
+                  <p>${text(value.body)}</p>
+                </article>
+              `)}
+            </div>
+          ` : ""}
         </div>
-        <div class="value-grid">
-          ${list(about.values, (value) => `
-            <article class="card value-card" data-reveal>
-              <span class="service-icon">${icon(value.icon || "check")}</span>
-              <h4>${text(value.title)}</h4>
-              <p>${text(value.body)}</p>
-            </article>
-          `)}
-        </div>
-      </div>
+      ` : ""}
     </div>
   `;
 }

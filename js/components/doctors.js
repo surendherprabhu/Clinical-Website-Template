@@ -8,6 +8,7 @@ export function renderDoctors(content) {
     : doctors.featured
       ? [doctors.featured]
       : [];
+  const doctorItems = Array.isArray(doctors.items) ? doctors.items : [];
 
   return `
     <div class="container doctors-layout">
@@ -28,17 +29,19 @@ export function renderDoctors(content) {
               <h3>${text(featured.name || "")}</h3>
               ${featured.role ? `<p class="doctor-role">${text(featured.role)}</p>` : ""}
               ${featured.bio ? `<p class="doctor-bio">${text(featured.bio)}</p>` : ""}
-              <div class="doctor-stat-grid">
-                ${list(featured.stats, (stat) => `
-                  <div class="doctor-stat">
-                    <span class="doctor-stat-icon">${icon(stat.icon || "spark")}</span>
-                    <div>
-                      <strong>${text(stat.value)}</strong>
-                      <span>${text(stat.label)}</span>
+              ${Array.isArray(featured.stats) && featured.stats.length ? `
+                <div class="doctor-stat-grid">
+                  ${list(featured.stats, (stat) => `
+                    <div class="doctor-stat">
+                      <span class="doctor-stat-icon">${icon(stat.icon || "spark")}</span>
+                      <div>
+                        <strong>${text(stat.value)}</strong>
+                        <span>${text(stat.label)}</span>
+                      </div>
                     </div>
-                  </div>
-                `)}
-              </div>
+                  `)}
+                </div>
+              ` : ""}
               ${featured.cta?.label ? `
                 <div class="button-row" style="margin-top: 1.4rem;">
                   <a class="button button-secondary" href="${href(featured.cta.href)}">
@@ -52,20 +55,22 @@ export function renderDoctors(content) {
         `)}
       </div>
 
-      <div class="doctor-grid">
-        ${list(doctors.items, (doctor) => `
-          <article class="card doctor-card" data-reveal>
-            <h3>${text(doctor.name)}</h3>
-            <p class="doctor-role">${text(doctor.role)}</p>
-            <p>${text(doctor.bio)}</p>
-            <ul>
-              ${list(doctor.focusAreas, (area) => `
-                <li>${icon("check")}<span>${text(area)}</span></li>
-              `)}
-            </ul>
-          </article>
-        `)}
-      </div>
+      ${doctorItems.length ? `
+        <div class="doctor-grid">
+          ${list(doctorItems, (doctor) => `
+            <article class="card doctor-card" data-reveal>
+              <h3>${text(doctor.name)}</h3>
+              <p class="doctor-role">${text(doctor.role)}</p>
+              <p>${text(doctor.bio)}</p>
+              <ul>
+                ${list(doctor.focusAreas, (area) => `
+                  <li>${icon("check")}<span>${text(area)}</span></li>
+                `)}
+              </ul>
+            </article>
+          `)}
+        </div>
+      ` : ""}
     </div>
   `;
 }

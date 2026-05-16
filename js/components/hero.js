@@ -3,6 +3,7 @@ import { icon } from "./icons.js";
 
 export function renderHero(content) {
   const { hero = {} } = content;
+  const hasTrustItems = Array.isArray(hero.trustItems) && hero.trustItems.length > 0;
 
   return `
     <div class="container hero-layout">
@@ -18,17 +19,19 @@ export function renderHero(content) {
             </a>
           `)}
         </div>
-        <div class="trust-strip">
-          ${list(hero.trustItems, (item) => `
-            <article class="trust-item" data-reveal>
-              <span class="trust-icon">${icon(item.icon || "shield")}</span>
-              <div>
-                <strong>${text(item.value)}</strong>
-                <span>${text(item.label)}</span>
-              </div>
-            </article>
-          `)}
-        </div>
+        ${hasTrustItems ? `
+          <div class="trust-strip">
+            ${list(hero.trustItems, (item) => `
+              <article class="trust-item" data-reveal>
+                <span class="trust-icon">${icon(item.icon || "shield")}</span>
+                <div>
+                  <strong>${text(item.value)}</strong>
+                  <span>${text(item.label)}</span>
+                </div>
+              </article>
+            `)}
+          </div>
+        ` : ""}
       </div>
 
       <div class="hero-visual" data-reveal>

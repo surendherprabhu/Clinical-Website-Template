@@ -31,8 +31,13 @@ clinic_data: dict[str, Any] = {
             },
             "branding": {
                 "name": "OraCare Dental Clinic",
-                "tagline": "Advanced Dentistry, Gentle Touch.",
-                "logoText": "OC",
+                "tagline": "Beautiful smiles through expert care.",
+                "logo": {
+                    "src": "./assets/images/logo.jpeg",
+                    "alt": "OraCare Dental Clinic logo",
+                    "width": 64,
+                    "height": 64,
+                },
                 "theme": {
                     "primary": "#1676c4",
                     "primaryDark": "#135a7a",
@@ -66,9 +71,9 @@ clinic_data: dict[str, Any] = {
                 },
             },
             "hero": {
-                "eyebrow": "Artistic smiles, precise care.",
-                "title": "OraCare: Oral Health is Over-All Health.",
-                "summary": "Next-gen care for a timeless smile, delivered with clinical mastery, transparency, and a gentle patient-first approach.",
+                "eyebrow": "The place where lively smiles are made.",
+                "title": "Oral Health is Over-All Health.",
+                "summary": "Personalized dental care for your confident smile, delivered with clinical mastery and transparency.",
                 "actions": [
                     {"label": "Request Appointment", "href": "#contact"},
                     {"label": "Explore Services", "href": "#services"},
@@ -81,30 +86,14 @@ clinic_data: dict[str, Any] = {
                 },
                 "imageNote": {
                     "title": "Care meets craft.",
-                    "body": "Beautiful smiles through expert care.",
+                    "body": "A Dentist is a Doctor, an Artist, and an Enginneer, all at the same time.",
                 },
-                "trustItems": [
-                    {
-                        "icon": "shield",
-                        "value": "Patient-First",
-                        "label": "Every treatment plan is shaped around comfort, goals, and long-term well-being.",
-                    },
-                    {
-                        "icon": "message",
-                        "value": "Compassion in Action",
-                        "label": "A judgment-free dental experience where patients feel heard, relaxed, and understood.",
-                    },
-                    {
-                        "icon": "spark",
-                        "value": "Unwavering Integrity",
-                        "label": "Honest advice, clear communication, and ethical care for every smile.",
-                    },
-                ],
+                "trustItems": [],
             },
             "services": {
                 "eyebrow": "Services",
                 "title": "Complete dental care for confident smiles",
-                "summary": "From preventive dentistry to cosmetic smile design, OraCare focuses on precise, personalized treatment in a calm clinical setting.",
+                "summary": "Here at OraCare Dental Clinic, we focus on precise and personalized treatment for any and all dental needs.",
                 "items": [
                     {
                         "icon": "stethoscope",
@@ -150,31 +139,12 @@ clinic_data: dict[str, Any] = {
                 "summary": "OraCare Dental Clinic combines advanced technology, clinical mastery, and a patient-first philosophy to make modern dentistry feel precise, transparent, and personal.",
                 "vision": {
                     "title": "Vision",
-                    "body": "To redefine the standard of modern dentistry through innovative care and clinical mastery, ensuring OraCare is the first name in lifelong oral health and radiant smiles.",
+                    "body": "Our vision is to prioritize every patient, raise awareness about oral health and its impact on the overall health of an individual and to provide ethical Medical and Dental practice.",
                 },
                 "mission": {
                     "title": "Mission",
-                    "body": "At OraCare, our mission is to redefine the dental experience through a fusion of advanced technology and a patient-first philosophy. Our dedicated team delivers precision-driven, personalized care to ensure every patient leaves with a healthy, confident, and radiant smile.",
+                    "body": "Our mission is to provide oral health care services with good standards to every individual in the communnity regardlless of who they are.",
                 },
-                "valuesTitle": "The OraCare Core Values",
-                "valuesSummary": "A healthy smile is built on more than clinical skill. It is built on trust, innovation, and genuine connection.",
-                "values": [
-                    {
-                        "icon": "shield",
-                        "title": "Patient-First",
-                        "body": "We do not just treat teeth; we care for people. Every treatment plan is a collaboration designed around comfort, goals, and lifestyle.",
-                    },
-                    {
-                        "icon": "message",
-                        "title": "Compassion in Action",
-                        "body": "Dental visits can be daunting, so we lead with empathy and create a judgment-free space where kindness is the default.",
-                    },
-                    {
-                        "icon": "check",
-                        "title": "Unwavering Integrity",
-                        "body": "Trust is our most valuable instrument. We practice honest advice, clear pricing, and ethical care that puts health first.",
-                    },
-                ],
             },
             "doctors": {
                 "eyebrow": "Care team",
@@ -184,18 +154,14 @@ clinic_data: dict[str, Any] = {
                     {
                         "kicker": "Lead clinician",
                         "name": "Dr.Gayathri.R",
-                        "role": "Oral Medicine and Radiology",
-                        "bio": "MBBS, MDS, FMCN",
+                        "role": "MBBS, MDS, FMCN - Oral Medicine and Radiology",
+                        "bio": "Born and brought up in Ranipet, Dr.Gayathri.R did her Bachelor of Dental Surgery (BDS) in Saveetha Dental College, Chennai in the year 2007. She completed her Master of Dental Surgery (MDS) in Oral Medicine and Radiology in the year 2011. She has been into the academic field for more than 7 years and has published in both national and international Dental jouranals and Publications. She has since then started her practice in both Ranipet and Chengalpattu. With over 15 years of experience in the field of dentistry, Dr.Gayathri.R has a deep understanding of oral health and in Functional Medicine. Dr.Gayathri.R is passionate about helping her patients achieve optimal oral health and a confident smile.",
                         "image": {
                             "src": "./assets/images/DR.Gayathri.jpeg",
                             "alt": "Generic lead clinician portrait placeholder",
                             "width": 900,
                             "height": 1100,
                         },
-                        "stats": [
-                            {"icon": "stethoscope", "value": "Oral Medicine and Radiology", "label": "Redefine the dental experience"},
-                            {"icon": "stethoscope", "value": "Compassion in Action", "label": "Focused on careful assessment, patient education, and coordinated support throughout the dental visit."},
-                        ],
                         "cta": {
                             "label": "View Appointment Options",
                             "href": "#contact",
@@ -204,74 +170,30 @@ clinic_data: dict[str, Any] = {
                     {
                         "kicker": "Lead clinician",
                         "name": "Dr.K.Prabhu",
-                        "role": "prosthodontist",
-                        "bio": "MBBS, MDS",
+                        "role": "MBBS, MDS - Prosthodontics and Implantology",
+                        "bio": "",
                         "image": {
                             "src": "./assets/images/Prabhu.jpeg",
                             "alt": "Generic second lead clinician portrait placeholder",
                             "width": 900,
                             "height": 1100,
                         },
-                        "stats": [
-                            {"icon": "stethoscope", "value": "Prosthodontist", "label": "Expert Prosthodontic Treatment"},
-                            {"icon": "stethoscope", "value": "Expert care", "label": "Comfort support"},
-                        ],
                         "cta": {
                             "label": "View Appointment Options",
                             "href": "#contact",
                         },
                     },
                 ],
-                "items": [
-                    {
-                        "name": "",
-                        "role": "Clinical dentistry support",
-                        "bio": "Focused on careful assessment, patient education, and coordinated support throughout the dental visit.",
-                        "focusAreas": ["Preventive guidance", "Treatment preparation", "Follow-up support"],
-                    },
-                    {
-                        "name": "",
-                        "role": "Aesthetic care support",
-                        "bio": "Supports cosmetic planning and patient communication for natural-looking, confidence-building smile outcomes.",
-                        "focusAreas": ["Smile goals", "Aesthetic planning", "Result-focused care"],
-                    },
-                    {
-                        "name": "",
-                        "role": "Comfort and coordination",
-                        "bio": "Helps patients feel informed, prepared, and supported before, during, and after their appointment.",
-                        "focusAreas": ["Appointment guidance", "Comfort support", "Care coordination"],
-                    },
-                ],
             },
             "testimonials": {
                 "eyebrow": "Patient feedback",
-                "title": "Patients choose care they can feel",
-                "summary": "OraCare is built around clear communication, gentle treatment, and confidence at every step.",
-                "labels": {
-                    "previous": "Show previous testimonial",
-                    "next": "Show next testimonial",
-                    "pagination": "Testimonial pagination",
+                "title": "Read what patients say on Google",
+                "summary": "Visit OraCare's Google Reviews profile for current patient feedback.",
+                "googleReviews": {
+                    "label": "View Google Reviews",
+                    "href": "https://share.google/fwXxFECKLiYlZywYF",
                 },
-                "items": [
-                    {
-                        "ratingLabel": "5.0 patient rating",
-                        "quote": "I wanted to share good experience abt tis clinic.I went for my scaling and 'm wondered and surprised the way Dr. Gayatri mam treated me.. She has nicely explained how to maintain oral hygiene wich we don follow routinely. Well maintained clinic and equipments.",
-                        "name": "Sujitha Dhanasekar",
-                        "context": "Verified visit",
-                    },
-                    {
-                        "ratingLabel": "4.9 patient rating",
-                        "quote": "Very Good Experience and Response, Good Explanation to our issues and requirements, Strong recommendation to visit Ora dental Clinic..",
-                        "name": "Balaji Sivakumar",
-                        "context": "Follow-up care",
-                    },
-                    {
-                        "ratingLabel": "4.8 patient rating",
-                        "quote": "Good in diagnosis, Clear explanation and economical clinic.",
-                        "name": "Ashok Kumar T M",
-                        "context": "Smile care",
-                    },
-                ],
+                "items": [],
             },
             "faq": {
                 "eyebrow": "Questions",
@@ -279,16 +201,16 @@ clinic_data: dict[str, Any] = {
                 "summary": "Find quick guidance on appointments, comfort, treatment planning, and OraCare's patient-first approach.",
                 "items": [
                     {
-                        "question": "What makes OraCare's approach different?",
-                        "answer": "OraCare combines advanced dentistry with a gentle, patient-first philosophy so treatment feels clear, comfortable, and personalized.",
+                        "question": "When should my child have their first dental visit?",
+                        "answer": "It is recommended that a child’s first dental visit be scheduled by their first birthday or within six months of the first tooth erupting. Early visits help ensure proper oral development and prevent future dental issues.",
                     },
                     {
-                        "question": "Can I discuss my smile goals before treatment?",
-                        "answer": "Yes. Every plan starts with a conversation about your comfort, goals, lifestyle, and long-term oral health.",
+                        "question": "What toothpaste should I use, and when should I start using it?",
+                        "answer": "There is no objective best toothpaste for everyone. The right toothpaste depends on your individual oral health needs and preferences. For children under 3 years old, use a smear of fluoride toothpaste. For children 3-6 years old, use a pea-sized amount. Adults should choose a fluoride toothpaste that meets their specific needs, such as sensitivity or whitening.",
                     },
                     {
-                        "question": "I feel nervous about dental visits. Can OraCare help?",
-                        "answer": "Yes. Compassion in action is one of OraCare's core values, and the clinic is designed to be judgment-free, calm, and reassuring.",
+                        "question": "Is Dental flossing really necessary?",
+                        "answer": "Yes. Flossing is an important part of oral hygiene as it helps remove plaque and food particles from between the teeth and under the gumline, areas that a toothbrush cannot reach. Regular flossing can help prevent cavities, gum disease, and bad breath.",
                     },
                     {
                         "question": "Will treatment options and pricing be explained clearly?",
