@@ -1,4 +1,4 @@
-import { list, text } from "../utils/dom.js";
+import { attr, imageTag, list, text } from "../utils/dom.js";
 import { icon } from "./icons.js";
 
 export function renderServices(content) {
@@ -15,14 +15,12 @@ export function renderServices(content) {
       <div class="service-grid">
         ${list(services.items, (item) => `
           <article class="card service-card" data-reveal>
-            <span class="service-icon">${icon(item.icon || "stethoscope")}</span>
             <h3>${text(item.title)}</h3>
-            <p>${text(item.description)}</p>
-            <ul>
-              ${list(item.highlights, (highlight) => `
-                <li>${icon("check")}<span>${text(highlight)}</span></li>
-              `)}
-            </ul>
+            <div class="service-card-media">
+              ${item.image?.src
+                ? imageTag(item.image, "service-image", "lazy")
+                : `<span class="service-image-placeholder" aria-label="${attr(item.title)} image placeholder">${icon("image")}</span>`}
+            </div>
           </article>
         `)}
       </div>

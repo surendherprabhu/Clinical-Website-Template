@@ -112,62 +112,56 @@
           {
             "icon": "stethoscope",
             "title": "Preventive Dentistry",
-            "description": "Routine dental exams, cleanings, and oral health guidance designed to protect smiles before problems grow.",
-            "highlights": [
-              "Dental checkups",
-              "Professional cleaning",
-              "Oral hygiene guidance"
-            ]
+            "image": {
+              "alt": "Preventive Dentistry",
+              "width": 800,
+              "height": 520
+            }
           },
           {
             "icon": "calendar",
             "title": "Cosmetic Smile Design",
-            "description": "Aesthetic dentistry options focused on natural-looking, radiant results that match each patient's goals.",
-            "highlights": [
-              "Smile planning",
-              "Whitening guidance",
-              "Aesthetic restorations"
-            ]
+            "image": {
+              "alt": "Cosmetic Smile Design",
+              "width": 800,
+              "height": 520
+            }
           },
           {
             "icon": "shield",
             "title": "Restorative Dentistry",
-            "description": "Precision-driven care for damaged, decayed, or missing teeth with a focus on function and appearance.",
-            "highlights": [
-              "Tooth-colored restorations",
-              "Crown planning",
-              "Bite-focused care"
-            ]
+            "image": {
+              "alt": "Restorative Dentistry",
+              "width": 800,
+              "height": 520
+            }
           },
           {
             "icon": "user",
             "title": "Expert Consultations",
-            "description": "Personalized dental assessments with clear explanations, practical options, and transparent recommendations.",
-            "highlights": [
-              "Personalized treatment plans",
-              "Second-opinion support",
-              "Clear care discussions"
-            ]
+            "image": {
+              "alt": "Expert Consultations",
+              "width": 800,
+              "height": 520
+            }
           },
           {
             "icon": "message",
             "title": "Gentle Patient Care",
-            "description": "A comfort-first approach for patients who want dental visits to feel calm, respectful, and reassuring.",
-            "highlights": [
-              "Judgment-free visits",
-              "Anxiety-aware care",
-              "Step-by-step guidance"
-            ]
+            "image": {
+              "alt": "Gentle Patient Care",
+              "width": 800,
+              "height": 520
+            }
           },
           {
             "icon": "spark",
             "title": "Lifelong Oral Health",
-            "description": "Ongoing care plans that support oral health, confidence, and radiant smiles at every stage of life.",
-            "highlights": [
-              "Maintenance plans",
-              "Follow-up support",
-              "Long-term smile health"
-            ]
+            "image": {
+              "alt": "Lifelong Oral Health",
+              "width": 800,
+              "height": 520
+            }
           }
         ]
       },
@@ -193,7 +187,7 @@
             "kicker": "Lead clinician",
             "name": "Dr.Gayathri.R",
             "role": "MBBS, MDS, FMCN - Oral Medicine and Radiology",
-            "bio": "Born and brought up in Ranipet, Dr.Gayathri.R did her Bachelor of Dental Surgery (BDS) in Saveetha Dental College, Chennai in the year 2007. She completed her Master of Dental Surgery (MDS) in Oral Medicine and Radiology in the year 2011. She has been into the academic field for more than 7 years and has published in both national and international Dental jouranals and Publications. She has since then started her practice in both Ranipet and Chengalpattu. With over 15 years of experience in the field of dentistry, Dr.Gayathri.R has a deep understanding of oral health and in Functional Medicine. Dr.Gayathri.R is passionate about helping her patients achieve optimal oral health and a confident smile.",
+            "bio": "Born and brought up in Ranipet, Dr.Gayathri.R did her Bachelor of Dental Surgery (BDS) in Saveetha Dental College, Chennai in the year 2007. She completed her Master of Dental Surgery (MDS) in Oral Medicine and Radiology in the year 2011. She has been into the academic field for more than 7 years and has published in both national and international Dental jouranals and Publications. She has since then started her practice in both Ranipet and Chengalpattu and has further completed The Functional Medicine course in the year 2025s. With over 15 years of experience in the field of dentistry, Dr.Gayathri.R has a deep understanding of oral health and in Functional Medicine. Dr.Gayathri.R is passionate about helping her patients achieve optimal oral health and a confident smile.",
             "image": {
               "src": "./assets/images/DR.Gayathri.jpeg",
               "alt": "Generic lead clinician portrait placeholder",
