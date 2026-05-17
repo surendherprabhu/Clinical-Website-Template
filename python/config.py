@@ -261,9 +261,18 @@ clinic_data: dict[str, Any] = {
                     "kicker": "Appointment request",
                     "title": "Start your smile care request",
                     "note": "Tell us what you would like help with, and the team will confirm the next steps.",
-                    "endpoint": "",
+                    "endpoint": "./api/appointment",
+                    "submitFormat": "json",
                     "submitLabel": "Send Request",
-                    "successMessage": "Your request has been received. The OraCare team will follow up soon.",
+                    "successMessage": "Your request has been sent. The OraCare team will follow up soon.",
+                    "errorMessage": "Sorry, the request could not be sent. Please call or WhatsApp the clinic.",
+                    "hiddenFields": [
+                        {"name": "source", "value": "OraCare website appointment form"},
+                    ],
+                    "honeypot": {
+                        "name": "_honey",
+                        "label": "Leave this field empty",
+                    },
                     "fields": [
                         {"type": "text", "name": "name", "label": "Full name", "placeholder": "Patient name", "required": True},
                         {"type": "tel", "name": "phone", "label": "Phone number", "placeholder": "+1 000 000 0000", "required": True},

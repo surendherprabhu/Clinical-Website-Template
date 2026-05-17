@@ -809,6 +809,14 @@
   gap: 0.4rem;
 }
 
+.field-honeypot {
+  position: absolute;
+  left: -100vw;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .field label {
   color: var(--color-ink);
   font-size: 0.9rem;
@@ -855,6 +863,15 @@
   min-height: 1.4em;
   color: var(--color-primary-dark);
   font-weight: 800;
+}
+
+.form-response.is-error {
+  color: #a33b2f;
+}
+
+.contact-form .button:disabled {
+  cursor: wait;
+  opacity: 0.7;
 }
 
 .appointment-panel {

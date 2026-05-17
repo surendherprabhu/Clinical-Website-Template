@@ -115,9 +115,13 @@ export function initCarousel() {
 export function initAppointmentForms() {
   document.querySelectorAll("[data-appointment-form]").forEach((form) => {
     const response = form.querySelector("[data-form-response]");
+    const submitButton = form.querySelector('button[type="submit"]');
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
+      if (response) {
+        response.textContent = "";
+      }
 
       if (!form.reportValidity()) {
         return;
@@ -125,19 +129,54 @@ export function initAppointmentForms() {
 
       const endpoint = form.dataset.endpoint;
       const success = form.dataset.successMessage;
+      const error = form.dataset.errorMessage;
+      const submitFormat = form.dataset.submitFormat || "json";
 
-      if (endpoint) {
-        const payload = Object.fromEntries(new FormData(form).entries());
-        await fetch(endpoint, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.setAttribute("aria-busy", "true");
       }
 
-      form.reset();
-      if (response) {
-        response.textContent = success;
+      try {
+        if (endpoint) {
+          const formData = new FormData(form);
+          const request =
+            submitFormat === "form-data"
+              ? {
+                  method: "POST",
+                  headers: { Accept: "application/json" },
+                  body: formData,
+                }
+              : {
+                  method: "POST",
+                  headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(Object.fromEntries(formData.entries())),
+                };
+
+          const result = await fetch(endpoint, request);
+          if (!result.ok) {
+            throw new Error(`Appointment request failed with status ${result.status}`);
+          }
+        }
+
+        form.reset();
+        if (response) {
+          response.textContent = success;
+          response.classList.remove("is-error");
+        }
+      } catch {
+        if (response) {
+          response.textContent = error;
+          response.classList.add("is-error");
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.removeAttribute("aria-busy");
+        }
       }
     });
   });
