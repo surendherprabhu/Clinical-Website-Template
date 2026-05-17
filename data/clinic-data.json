@@ -111,54 +111,60 @@
         "items": [
           {
             "icon": "stethoscope",
-            "title": "Preventive Dentistry",
+            "title": "Diagnosis",
             "image": {
-              "alt": "Preventive Dentistry",
+              "src": "./assets/images/services/diagnosis.jpg",
+              "alt": "Diagnosis",
               "width": 800,
               "height": 520
             }
           },
           {
             "icon": "calendar",
-            "title": "Cosmetic Smile Design",
+            "title": "X-Ray",
             "image": {
-              "alt": "Cosmetic Smile Design",
+              "src": "./assets/images/services/xray.jpg",
+              "alt": "X-Ray",
               "width": 800,
               "height": 520
             }
           },
           {
             "icon": "shield",
-            "title": "Restorative Dentistry",
+            "title": "Preventive Dentistry",
             "image": {
-              "alt": "Restorative Dentistry",
+              "src": "./assets/images/services/preventive dentistry.jpg",
+              "alt": "Preventive Dentistry",
               "width": 800,
               "height": 520
             }
           },
           {
             "icon": "user",
-            "title": "Expert Consultations",
+            "title": "Prosthodontics and Implantology",
             "image": {
-              "alt": "Expert Consultations",
+              "src": "./assets/images/services/Implant.jpg",
+              "alt": "Prosthodontics and Implantology",
               "width": 800,
               "height": 520
             }
           },
           {
             "icon": "message",
-            "title": "Gentle Patient Care",
+            "title": "Orthodontics and Aligner Therapy",
             "image": {
-              "alt": "Gentle Patient Care",
+              "src": "./assets/images/services/Aligners.jpg",
+              "alt": "Orthodontics and Aligner Therapy",
               "width": 800,
               "height": 520
             }
           },
           {
             "icon": "spark",
-            "title": "Lifelong Oral Health",
+            "title": "Restorative Dentistry",
             "image": {
-              "alt": "Lifelong Oral Health",
+              "src": "./assets/images/services/restrorative dentistry.jpg",
+              "alt": "Restorative Dentistry",
               "width": 800,
               "height": 520
             }
@@ -203,7 +209,7 @@
             "kicker": "Lead clinician",
             "name": "Dr.K.Prabhu",
             "role": "MBBS, MDS - Prosthodontics and Implantology",
-            "bio": "",
+            "bio": "Born and Brought up in Chengalpattu, Dr.Prabhu.K did his bachelor of Dental Surgery (BDS) in Rajah Muthiah Dental College, Chidambaram and followed on his Master of Dental Surgery (MDS) in Saveetha Dental College, Chennai in the year 2010. He has also Completed his training in Computer Guided Implant Dentistry in Belgium in the year 2010. He has since been in the academic field for more than 15 years and has also published in numerous National and International Dental Journals and Publications. He has also been practicing in both Ranipet and Chengalpattu. He has a deep understanding of Prosthodontics and Implantology and is passionate about helping his patients achieve optimal oral health and a confident smile.",
             "image": {
               "src": "./assets/images/Prabhu.jpeg",
               "alt": "Generic second lead clinician portrait placeholder",
