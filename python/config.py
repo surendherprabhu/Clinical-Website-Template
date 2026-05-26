@@ -75,7 +75,7 @@ clinic_data: dict[str, Any] = {
                 "title": "Oral Health is Over-All Health.",
                 "summary": "Personalized dental care for your confident smile, delivered with clinical mastery and transparency.",
                 "actions": [
-                    {"label": "Request Appointment", "href": "#contact"},
+                    {"label": "Request Appointment", "href": "#appointment"},
                     {"label": "Explore Services", "href": "#services"},
                 ],
                 "image": {
@@ -86,7 +86,7 @@ clinic_data: dict[str, Any] = {
                 },
                 "imageNote": {
                     "title": "Care meets craft.",
-                    "body": "A Dentist is a Doctor, an Artist, and an Enginneer, all at the same time.",
+                    "body": "A Dentist is a Doctor, an Artist, and an Enginneer, all at the same time and at the same place.",
                 },
                 "trustItems": [],
             },
@@ -159,15 +159,16 @@ clinic_data: dict[str, Any] = {
             },
             "about": {
                 "eyebrow": "About OraCare",
-                "title": "Where every smile tells a story.",
-                "summary": "OraCare Dental Clinic combines advanced technology, clinical mastery, and a patient-first philosophy to make modern dentistry feel precise, transparent, and personal.",
+                "title": "Where every smile tells you a story.",
+                "summary": """Founded in the year 2018, In the city of Ranipet, OraCare Dental Clinic offers complete dental care for any and all dental needs.
+We follow a multi-disciplinary practice in which Specialists in various fields provide you with the Best possible Dental Treatment. With Experienced hands and a wide range of treatments offered, we are committed to providing the best dental care experience for our patients, with a focus on personalized treatment and a compassionate approach.""",
                 "vision": {
                     "title": "Vision",
-                    "body": "Our vision is to prioritize every patient, raise awareness about oral health and its impact on the overall health of an individual and to provide ethical Medical and Dental practice.",
+                    "body": "Our vision is to prioritize every patient, raise awareness about Oral Health and its impact on the overall health of an individual and to provide ethical Medical and Dental practice.",
                 },
                 "mission": {
                     "title": "Mission",
-                    "body": "Our mission is to provide oral health care services with good standards to every individual in the communnity regardlless of who they are.",
+                    "body": "Our mission is to provide Oral Health Care services with good standards to every individual in the community.",
                 },
             },
             "doctors": {
@@ -265,32 +266,10 @@ clinic_data: dict[str, Any] = {
                 ],
                 "form": {
                     "kicker": "Appointment request",
-                    "title": "Start your smile care request",
-                    "note": "Tell us what you would like help with, and the team will confirm the next steps.",
-                    "endpoint": "./api/appointment",
-                    "submitFormat": "json",
-                    "submitLabel": "Send Request",
-                    "successMessage": "Your request has been sent. The OraCare team will follow up soon.",
-                    "errorMessage": "Sorry, the request could not be sent. Please call or WhatsApp the clinic.",
-                    "hiddenFields": [
-                        {"name": "source", "value": "OraCare website appointment form"},
-                    ],
-                    "honeypot": {
-                        "name": "_honey",
-                        "label": "Leave this field empty",
-                    },
-                    "fields": [
-                        {"type": "text", "name": "name", "label": "Full name", "placeholder": "Patient name", "required": True},
-                        {"type": "tel", "name": "phone", "label": "Phone number", "placeholder": "+1 000 000 0000", "required": True},
-                        {"type": "select", "name": "service", "label": "Service", "required": True, "options": [
-                            {"value": "", "label": "Choose a service"},
-                            {"value": "preventive-dentistry", "label": "Preventive Dentistry"},
-                            {"value": "cosmetic-smile-design", "label": "Cosmetic Smile Design"},
-                            {"value": "restorative-dentistry", "label": "Restorative Dentistry"},
-                        ]},
-                        {"type": "date", "name": "date", "label": "Preferred date", "required": False},
-                        {"type": "textarea", "name": "message", "label": "Message", "placeholder": "Share the reason for visit", "required": False},
-                    ],
+                    "title": "Book through our Google Form",
+                    "note": "Appointments are collected through Google Forms and saved automatically to Google Sheets.",
+                    "externalUrl": "https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM_LINK",
+                    "submitLabel": "Open Appointment Form",
                 },
                 "branches": [
                     {
@@ -333,9 +312,9 @@ clinic_data: dict[str, Any] = {
             },
             "appointment": {
                 "title": "Ready for a healthier, brighter smile?",
-                "summary": "Request an appointment and take the next step toward advanced dentistry with a gentle touch.",
+                "summary": "Request an appointment through the OraCare Google Form.",
                 "actions": [
-                    {"label": "Request Appointment", "href": "#contact"},
+                    {"label": "Open Appointment Form", "href": "https://docs.google.com/forms/d/e/1FAIpQLSfU0oo9fUOq7GHQhD0d8pGZ1q8xKdhshD3AQbSRVbUls680tA/viewform?usp=publish-editor"},
                     {"label": "Call Clinic", "href": "tel:+919940592307"},
                 ],
             },

@@ -14,7 +14,7 @@ export function renderAppointment(content) {
           </div>
           <div class="button-row appointment-actions">
             ${list(appointment.actions, (action, index) => `
-              <a class="button ${index === 0 ? "button-primary" : "button-secondary"}" href="${href(action.href)}">
+              <a class="button ${index === 0 ? "button-primary" : "button-secondary"}" href="${href(action.href)}" ${String(action.href || "").startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""}>
                 ${text(action.label)}
                 ${icon(index === 0 ? "calendar" : "phone")}
               </a>

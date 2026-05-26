@@ -49,24 +49,21 @@ node tools/static-server.mjs 8000
 
 4. Open `http://localhost:8000`.
 
-## Appointment Email
+## Appointment Form
 
-The appointment form posts to `/api/appointment`. The included Node server sends those requests through Gmail SMTP to `surendherprabhu@gmail.com`.
+The appointment buttons link to a Google Form. Google Forms can save responses directly into Google Sheets, so the website stays static-hosting friendly.
 
-Create a Gmail App Password for the sending Gmail account, then run the server with:
+Setup:
 
-```bash
-GMAIL_USER="surendherprabhu@gmail.com" \
-GMAIL_APP_PASSWORD="your-gmail-app-password" \
-APPOINTMENT_TO_EMAIL="surendherprabhu@gmail.com" \
-node tools/static-server.mjs 8000
-```
-
-The Gmail password must stay on the server as an environment variable. Do not put it in `python/config.py`, `data/clinic-data.json`, or frontend JavaScript.
+1. Create a Google Form with the appointment fields.
+2. In Google Forms, open `Responses` and link it to a Google Sheet.
+3. Copy the Google Form share URL.
+4. Replace `https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM_LINK` in `python/config.py`.
+5. Export the config again to update `data/clinic-data.json`.
 
 ## Scaling Notes
 
 - Add clinics by registering additional entries in `clinic_profiles`.
 - Add languages by adding locale keys under `locales` and opening the site with `?lang=<code>`.
-- Connect the appointment form by setting `contact.form.endpoint` in the exported data.
+- Connect appointments by replacing the Google Form URL in `contact.form.externalUrl`.
 - Replace image paths, colors, navigation, services, doctors, branches, testimonials, FAQ, and footer content from configuration only.
