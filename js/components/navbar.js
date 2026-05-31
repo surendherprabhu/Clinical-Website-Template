@@ -5,6 +5,11 @@ export function renderNavbar(content) {
   const { branding = {}, navigation = {} } = content;
   const labels = navigation.labels || {};
   const cta = navigation.cta || {};
+  const navActions = Array.isArray(navigation.actions)
+    ? navigation.actions
+    : cta.label
+      ? [cta]
+      : [];
   const brandMark = branding.logo?.src
     ? imageTag(branding.logo, "brand-mark-image", "eager")
     : text(branding.logoText || "");
@@ -31,11 +36,15 @@ export function renderNavbar(content) {
             </li>
           `)}
         </ul>
-        ${cta.label ? `
-          <a class="button button-primary" href="${href(cta.href)}" data-nav-link>
-            ${text(cta.label)}
-            ${icon("arrowRight")}
-          </a>
+        ${navActions.length ? `
+          <div class="nav-actions">
+            ${list(navActions, (action) => `
+              <a class="button ${action.variant === "secondary" ? "button-secondary nav-camp-button" : "button-primary"}" href="${href(action.href)}" ${String(action.href || "").startsWith("http") ? 'target="_blank" rel="noopener noreferrer"' : ""} data-nav-link>
+                ${text(action.label)}
+                ${icon("arrowRight")}
+              </a>
+            `)}
+          </div>
         ` : ""}
       </nav>
     </div>

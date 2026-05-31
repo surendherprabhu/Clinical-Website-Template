@@ -59,7 +59,8 @@ Setup:
 2. In Google Forms, open `Responses` and link it to a Google Sheet.
 3. Copy the Google Form share URL.
 4. Replace `https://forms.gle/REPLACE_WITH_YOUR_GOOGLE_FORM_LINK` in `python/config.py`.
-5. Export the config again to update `data/clinic-data.json`.
+5. Replace `https://forms.gle/REPLACE_WITH_ALIGNER_CAMP_FORM_LINK` if you are using the aligner camp top-bar button.
+6. Export the config again to update `data/clinic-data.json`.
 
 ## Scaling Notes
 

@@ -65,10 +65,18 @@ clinic_data: dict[str, Any] = {
                     {"label": "FAQ", "href": "#faq"},
                     {"label": "Contact", "href": "#contact"},
                 ],
-                "cta": {
-                    "label": "Book Appointment",
-                    "href": "#appointment",
-                },
+                "actions": [
+                    {
+                        "label": "Aligner Camp",
+                        "href": "https://forms.gle/REPLACE_WITH_ALIGNER_CAMP_FORM_LINK",
+                        "variant": "secondary",
+                    },
+                    {
+                        "label": "Book Appointment",
+                        "href": "#appointment",
+                        "variant": "primary",
+                    },
+                ],
             },
             "hero": {
                 "eyebrow": "The place where lively smiles are made.",

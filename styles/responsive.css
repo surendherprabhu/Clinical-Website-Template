@@ -144,6 +144,11 @@
     gap: 0.25rem;
   }
 
+  .nav-actions {
+    display: grid;
+    gap: 0.6rem;
+  }
+
   .nav-link {
     width: 100%;
     justify-content: center;
